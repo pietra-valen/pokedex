@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+    <!-- Pietra Valentina e Victor Hugo -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokédex</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
-
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <div class="logo"> <img src="https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png" alt="Logo do Pokémon" style="width: 30px;"> POKEDÉX</div>
+    <header class="cabecalho">
+        <img src="https://www.freepnglogos.com/uploads/pokemon-symbol-logo-png-31.png" alt="Logo do Pokémon" class="cabecalho-logo">
+        <h1>POKÉDEX</h1>
+    </header>
 
-    <div id="busca">Digite o nome de um Pokémon
-        <input type="text" id="pokemonNome" placeholder="Nome do Pokémon">
-    </div>
+    <main>
+        <form id="busca" class="busca">
+            <label for="pokemonNome">Digite o nome de um Pokémon</label>
+            <div class="busca-campos">
+                <input id="pokemonNome" placeholder="Nome do Pokémon">
+                <button>Buscar</button>
+            </div>
+        </form>
 
-    <div class="buscar">
-        <button>Buscar</button>
-        
-    </div>
-
-    <div class="pokemon">
-
-        <h2>nome: <span id="nome"></span></h2>
-        <h2>tipo: <span id="tipo"></span></h2>
-
-    </div>
-    
+       
+        <section id="resultado" class="resultado"></section>
+    </main>
 
 </body>
 </html>
