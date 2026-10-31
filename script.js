@@ -29,6 +29,11 @@ async function buscarPokemon(nome) {
 function mostrarPokemon(pokemon) {
 
     /**
+     Pega o tipo principal do pokemon
+    */
+    let tipo = pokemon.types[0].type.name;
+
+    /**
      Pegando os tipos do pokemon
      */
     let tipos = "";
@@ -67,7 +72,7 @@ function mostrarPokemon(pokemon) {
      Cria a carta
      */
     resultado.innerHTML = `
-        <div class="cartinha">
+        <div class="cartinha tipo-${tipo}">
 
             <h2>#${pokemon.id} - ${nome}</h2>
 
